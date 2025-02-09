@@ -1,5 +1,7 @@
 import math
+import numpy as np
 import scipy
+from scipy.stats import norm
 
 class SignalDetection:
     def __init__(self, hits, misses, false_alarms, correct_rejections):
@@ -17,7 +19,7 @@ class SignalDetection:
         return FA
     
     def d_prime(self):
-        '''hit_rate = self.hit_rate()
+        hit_rate = self.hit_rate()
         fa_rate = self.false_alarm_rate()
         
         # Handle edge cases
@@ -27,10 +29,10 @@ class SignalDetection:
         z_hit = norm.ppf(hit_rate)
         z_fa = norm.ppf(fa_rate)
         
-        return z_hit - z_fa'''
+        return z_hit - z_fa
     
     def criterion(self):
-        '''hit_rate = self.hit_rate()
+        hit_rate = self.hit_rate()
         fa_rate = self.false_alarm_rate()
         
         # Handle edge cases
@@ -40,4 +42,4 @@ class SignalDetection:
         z_hit = norm.ppf(hit_rate)
         z_fa = norm.ppf(fa_rate)
         
-        return -0.5 * (z_hit + z_fa)'''
+        return -0.5 * (z_hit + z_fa)
