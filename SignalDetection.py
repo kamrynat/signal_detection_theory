@@ -1,8 +1,8 @@
 import numpy as np
 from scipy.stats import norm
 
-class SignalDetection:
-    def __init__(self, hits, misses, false_alarms, correct_rejections):
+class SignalDetection:  # used ZotGPT to make structure of class
+    def __init__(self, hits, misses, false_alarms, correct_rejections): 
         self.hits = hits
         self.misses = misses
         self.false_alarms = false_alarms
@@ -14,7 +14,7 @@ class SignalDetection:
     def false_alarm_rate(self):
         return self.false_alarms / (self.false_alarms + self.correct_rejections) 
     
-    def d_prime(self):
+    def d_prime(self): # used ZotGPT to write this function
         hit_rate = self.hit_rate()
         fa_rate = self.false_alarm_rate()
         
@@ -27,7 +27,7 @@ class SignalDetection:
         
         return z_hit - z_fa
     
-    def criterion(self):
+    def criterion(self): # used ZotGPT to write this function
         hit_rate = self.hit_rate()
         fa_rate = self.false_alarm_rate()
         
